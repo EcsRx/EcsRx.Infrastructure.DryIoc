@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EcsRx.Infrastructure" Version="3.12.77" />
+      <PackageReference Include="EcsRx.Plugins.Batching" Version="3.12.77" />
+      <PackageReference Include="EcsRx.Plugins.Computeds" Version="3.12.77" />
+      <PackageReference Include="EcsRx.Plugins.Persistence" Version="3.12.77" />
+      <PackageReference Include="EcsRx.Plugins.ReactiveSystems" Version="3.12.77" />
+      <PackageReference Include="EcsRx.Plugins.Views" Version="3.12.77" />
+      <PackageReference Include="LazyData" Version="3.0.17" />
+      <PackageReference Include="LazyData.Json" Version="3.0.17" />
+      <PackageReference Include="Persistity" Version="1.1.33" />
+      <PackageReference Include="Persistity.Endpoints.Http" Version="1.1.33" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EcsRx.Infrastructure.DryIoc\EcsRx.Infrastructure.DryIoc.csproj" />
+    </ItemGroup>
+
+</Project>
