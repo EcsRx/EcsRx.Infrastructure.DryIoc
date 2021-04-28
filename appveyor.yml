@@ -1,7 +1,7 @@
 version: 3.12.{build}
 branches:
   only:
-  - master
+  - main
   - build-test
 image: Visual Studio 2019
 configuration: Release
