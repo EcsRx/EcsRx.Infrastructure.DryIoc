@@ -12,7 +12,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="DryIoc" Version="4.7.6" />
+      <PackageReference Include="DryIoc.dll" Version="4.7.6" />
       <PackageReference Include="EcsRx.Infrastructure" Version="3.12.77" />
     </ItemGroup>
 
