@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
+using SystemsRx.Infrastructure.Dependencies;
 using DryIoc;
-using EcsRx.Infrastructure.Dependencies;
 
 namespace EcsRx.Infrastructure.DryIoc
 {

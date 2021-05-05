@@ -6,12 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="EcsRx.Infrastructure" Version="3.12.77" />
-      <PackageReference Include="EcsRx.Plugins.Batching" Version="3.12.77" />
-      <PackageReference Include="EcsRx.Plugins.Computeds" Version="3.12.77" />
-      <PackageReference Include="EcsRx.Plugins.Persistence" Version="3.12.77" />
-      <PackageReference Include="EcsRx.Plugins.ReactiveSystems" Version="3.12.77" />
-      <PackageReference Include="EcsRx.Plugins.Views" Version="3.12.77" />
+      <PackageReference Include="EcsRx.Infrastructure" Version="4.0.87" />
+      <PackageReference Include="EcsRx.Plugins.Batching" Version="4.0.87" />
+      <PackageReference Include="EcsRx.Plugins.Computeds" Version="4.0.87" />
+      <PackageReference Include="EcsRx.Plugins.GroupBinding" Version="4.0.87" />
+      <PackageReference Include="EcsRx.Plugins.Persistence" Version="4.0.87" />
+      <PackageReference Include="EcsRx.Plugins.ReactiveSystems" Version="4.0.87" />
+      <PackageReference Include="EcsRx.Plugins.Views" Version="4.0.87" />
       <PackageReference Include="LazyData" Version="3.0.17" />
       <PackageReference Include="LazyData.Json" Version="3.0.17" />
       <PackageReference Include="Persistity" Version="1.1.33" />

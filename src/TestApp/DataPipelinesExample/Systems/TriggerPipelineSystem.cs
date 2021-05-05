@@ -2,10 +2,12 @@ using System;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using EcsRx.Events;
+using SystemsRx.Systems.Conventional;
 using EcsRx.Extensions;
 using EcsRx.Groups;
-using EcsRx.Plugins.ReactiveSystems.Custom;
+using EcsRx.Groups.Observable;
+using EcsRx.Plugins.GroupBinding.Attributes;
+using EcsRx.Systems;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using TestApp.DataPipelinesExample.Components;
@@ -14,18 +16,21 @@ using TestApp.DataPipelinesExample.Pipelines;
 
 namespace TestApp.DataPipelinesExample.Systems
 {
-    public class TriggerPipelineSystem : EventReactionSystem<SavePipelineEvent>
+    public class TriggerPipelineSystem : IReactToEventSystem<SavePipelineEvent>, IGroupSystem
     {
-        public override IGroup Group => new Group(typeof(PlayerStateComponent));
+        public IGroup Group => new Group(typeof(PlayerStateComponent));
+
+        [FromGroup]
+        public IObservableGroup ObservableGroup;
         
         public PostJsonHttpPipeline SaveJsonPipeline { get; }
 
-        public TriggerPipelineSystem(IEventSystem eventSystem, PostJsonHttpPipeline saveJsonPipeline) : base(eventSystem)
+        public TriggerPipelineSystem(PostJsonHttpPipeline saveJsonPipeline)
         {
             SaveJsonPipeline = saveJsonPipeline;
         }
         
-        public override void EventTriggered(SavePipelineEvent eventData)
+        public void Process(SavePipelineEvent eventData)
         {
             var entity = ObservableGroup.Single();
             var playerState = entity.GetComponent<PlayerStateComponent>();

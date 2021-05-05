@@ -1,6 +1,6 @@
 ﻿using System;
+using SystemsRx.Infrastructure.Extensions;
 using EcsRx.Extensions;
-using EcsRx.Infrastructure.Extensions;
 using TestApp.Application;
 using TestApp.DataPipelinesExample.Components;
 using TestApp.DataPipelinesExample.Events;

@@ -1,8 +1,9 @@
-﻿using EcsRx.Infrastructure;
-using EcsRx.Infrastructure.Dependencies;
+﻿using SystemsRx.Infrastructure.Dependencies;
+using EcsRx.Infrastructure;
 using EcsRx.Infrastructure.DryIoc;
 using EcsRx.Plugins.Batching;
 using EcsRx.Plugins.Computeds;
+using EcsRx.Plugins.GroupBinding;
 using EcsRx.Plugins.Persistence;
 using EcsRx.Plugins.ReactiveSystems;
 using EcsRx.Plugins.ReactiveSystems.Extensions;
@@ -21,6 +22,7 @@ namespace TestApp.Application
             RegisterPlugin(new ViewsPlugin());
             RegisterPlugin(new BatchPlugin());
             RegisterPlugin(new PersistencePlugin());
+            RegisterPlugin(new GroupBindingsPlugin());
         }
 
         protected override void StartSystems()

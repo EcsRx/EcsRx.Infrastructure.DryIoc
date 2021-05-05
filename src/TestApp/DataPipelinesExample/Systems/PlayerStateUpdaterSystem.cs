@@ -1,13 +1,13 @@
+using SystemsRx.Scheduling;
 using EcsRx.Entities;
 using EcsRx.Extensions;
 using EcsRx.Groups;
-using EcsRx.Scheduling;
 using EcsRx.Systems;
 using TestApp.DataPipelinesExample.Components;
 
 namespace TestApp.DataPipelinesExample.Systems
 {
-    public class PlayerStateUpdaterSystem : IBasicSystem
+    public class PlayerStateUpdaterSystem : IBasicEntitySystem
     {
         public IGroup Group { get; } = new Group(typeof(PlayerStateComponent));
         
